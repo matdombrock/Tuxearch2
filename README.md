@@ -1,6 +1,12 @@
 # Tuxearch v2
 ***Pronounced: (tux-search)***
 
+![alt text](https://i.imgur.com/PsAOAia.gif)
+
+(Due to GIF compression, the color of the actual product may vary)
+
+
+[DEMO ON GITHUB PAGES](https://mzero.space/Tuxearch2)
 ## About
 Tuxearch is a tool made to help developers, system admins and command-line enthusiasts store and retrieve their most commonly used commands in a quick and easy way. 
 
