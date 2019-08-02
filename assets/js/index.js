@@ -23,6 +23,7 @@ window.onload = function () {
         methods:
         {
             init: async function(){
+                this.config.url = config.url;
                 this.config.displayAllResultsOnEmptySearch = config.displayAllResultsOnEmptySearch;
                 this.config.displayItemPoints = config.displayItemPoints;
                 this.config.displayItemTags = config.displayItemTags;
@@ -41,7 +42,7 @@ window.onload = function () {
             loadJSON: function(callback){
                 var xobj = new XMLHttpRequest();
                 xobj.overrideMimeType("application/json");
-                xobj.open('GET', '../db/'+this.config.databaseName, true);
+                xobj.open('GET', this.config.url+'/db/'+this.config.databaseName, true);
                 xobj.onreadystatechange = function () {
                     if (xobj.readyState == 4 && xobj.status == "200") {
                     callback(JSON.parse(xobj.responseText));

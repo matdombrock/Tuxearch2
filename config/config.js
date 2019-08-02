@@ -1,5 +1,8 @@
 const config = [];
 
+// Application URL with trailing slash
+config.url = "https://mzero.space/Tuxearch2/";
+
 // What is the name of our database file in the 'db' directory?
 config.databaseName = "db.json";
 
