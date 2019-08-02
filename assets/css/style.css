@@ -1,0 +1,87 @@
+body, html{
+    background:rgb(46, 46, 46);
+    color:rgb(0, 209, 129);
+    margin:0 auto;
+    font-family:"Lucida Console", Monaco, monospace;
+    overflow: hidden;
+}
+a, a:hover, a:visited{
+    color:rgb(0, 209, 129);
+}
+.top-bar{
+    font-size:2em;
+    background:rgb(56, 56, 56);
+    padding:1rem;
+    font-weight: bold;
+}
+.sub-title{
+    color:rgb(189, 189, 189);
+    font-size:0.5em;
+    padding-left:2rem;
+}
+.tux-img img{
+    max-height:3rem;
+    float:right;
+}
+.results{
+    max-height:calc(100vh - 8.5rem);
+    overflow-y:scroll;
+}
+.result-card{
+    margin:1rem;
+    border:3px solid black;
+    background:rgb(87, 87, 87);
+
+}
+.search-bar{
+    width:100%;
+    font-size:2em;
+    padding:0.5rem;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+    color:white;
+    background:black;
+    border:none;
+    outline:none;
+}
+.item-info{
+    background:rgb(61, 61, 61);
+    padding:0.75rem;
+    color:rgb(223, 223, 223);
+    font-size:1.25em;
+}
+.item-command{
+    background:rgb(0, 0, 0);
+    padding:1rem;
+}
+.item-tags{
+    text-align:right;
+    padding:0.25rem;
+    color:rgb(187, 187, 187);
+    font-size:0.5em;
+    float:right;
+}
+.overflow-watcher{
+    min-height:6rem;
+    text-align:center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #888; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(73, 73, 73); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 209, 129);
+  }

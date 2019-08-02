@@ -1,0 +1,50 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="config/config.js"></script>
+    <script src="assets/js/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="top-bar">
+        Tuxearch v2
+        <span class="tux-img">
+            <img src="assets/img/tux.png" id="tux-img">
+        </span>
+        <br>
+        <span class="sub-title">
+            A searchable database for command line tools and code snippets. 
+        </span>
+    </div>
+    <input type="text" v-model="state.searchText" @input="search()" class="search-bar" id="search-bar" placeholder="search terms">
+    <br>
+    <div class="results" id="results">
+        <div v-for="item in state.results" class="result-card">
+            <div class="item-info">
+                {{item.INFO}}
+                <span class="item-tags" v-if="config.displayItemPoints">
+                        ({{item.POINTS}})
+                </span>
+                <span class="item-tags" v-if="config.displayItemTags">
+                        [{{item.TAGS}}]
+                </span>
+            </div>
+            <div class="item-command">
+                {{item.COMMAND}}
+            </div>
+        </div>
+        <div class="overflow-watcher">
+            <div v-if="config.hideCredits == false">
+                ...
+                <br><br>
+                Tuxearch is <a href="https://mzero.space" target="_blank">open source</a> libre software.
+                <br><br>
+                Developed and Maintained by
+                <br><br>
+                <a href="https://mzero.space" target="_blank">Mathieu Dombrock</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
