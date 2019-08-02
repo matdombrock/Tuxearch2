@@ -13,7 +13,9 @@ Tuxearch has no external dependencies outside of VueJS.
 ## Install
 This is 100% front-end Javascript and HTML. There is no need to configure a database, but this does need to run on some kind of web server. 
 
-Simply clone these project files to a working web server and you should be good to go!
+1. Clone this project into a new directory on your active web server.
+2. Change the application URL in the ```config/config.js``` file to reflect the URL where you are hosting the software.
+3. Confirm the software is working correctly by visiting the URL you just configured.  
 
 ## Usage
 To use the software simply start typing your search query into the search bar and the available commands will automatically filter down to show just the ones that are most relevant to your search criteria. 
@@ -43,6 +45,9 @@ You can edit the file ```config/config.js``` to easily make some changes to the 
 Here is a copy of the default configuration settings:
 ```js
 const config = [];
+
+// Application URL with trailing slash
+config.url = "https://mzero.space/Tuxearch2/";
 
 // What is the name of our database file in the 'db' directory?
 config.databaseName = "db.json";
