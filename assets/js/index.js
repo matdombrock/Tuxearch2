@@ -67,13 +67,14 @@ window.onload = function () {
                 this.database.forEach(function(item){
                     var points = 0;
                     terms.forEach(function(term){
-                        if(item.COMMAND.includes(term)){
+                        term = term.toLowerCase();
+                        if(item.COMMAND.toLowerCase().includes(term)){
                             points += 1;
                         }
-                        if(item.INFO.includes(term)){
+                        if(item.INFO.toLowerCase().includes(term)){
                             points += 1;
                         }
-                        if(item.TAGS.includes(term)){
+                        if(item.TAGS.toLowerCase().includes(term)){
                             points += 1;
                         }
                     });
