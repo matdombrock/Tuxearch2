@@ -67,7 +67,7 @@ window.onload = function () {
                 this.database.forEach(function(item){
                     var points = 0;
                     terms.forEach(function(term){
-                        term = term.toLowerCase();
+                        term = term.toLowerCase(); // make sure our search is not case sensitive
                         if(item.COMMAND.toLowerCase().includes(term)){
                             points += 1;
                         }
